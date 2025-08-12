@@ -1,9 +1,8 @@
-// src/App.jsx
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Home from "./Home"; // Make sure the path is correct
+import Home from "./Home"; 
 
 const App = () => {
   return (
@@ -11,7 +10,6 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* You can add more routes later */}
       </Routes>
       <Footer />
     </>

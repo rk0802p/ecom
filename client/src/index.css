@@ -1,3 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
+    color: #2C2C2C;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  .glass-overlay {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .soft-shadow {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+  
+  .elegant-gradient {
+    background: linear-gradient(135deg, #FFE4D6 0%, #E6E6FA 50%, #E6F3FF 100%);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, #FFB6A3, #B8A9C9, #A8C5E6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .smooth-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #FFB6A3, #B8A9C9);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #B8A9C9, #A8C5E6);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(255, 182, 163, 0.3);
+  color: #2C2C2C;
+}
+
+/* Focus states */
+button:focus, input:focus, textarea:focus {
+  outline: 2px solid #FFB6A3;
+  outline-offset: 2px;
+}
