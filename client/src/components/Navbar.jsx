@@ -37,9 +37,9 @@ const Navbar = () => {
             <a href="#products" className="text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium">
               Products
             </a>
-            <a href="#about" className="text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium">
+            <Link to="/about" className="text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium">
               About
-            </a>
+            </Link>
             <Link to="/contact" className="text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium">
               Contact
             </Link>
@@ -79,9 +79,9 @@ const Navbar = () => {
               <a href="#products" className="block text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium py-2">
                 Products
               </a>
-              <a href="#about" className="block text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium py-2">
+              <Link to="/about" className="block text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium py-2">
                 About
-              </a>
+              </Link>
               <Link to="/contact" className="block text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium py-2">
                 Contact
               </Link>
