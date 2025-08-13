@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,25 +24,25 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-2xl md:text-3xl font-playfair font-bold text-gradient">
+            <Link to="/" className="text-2xl md:text-3xl font-playfair font-bold text-gradient">
               AeroStride
-            </h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium">
+            <Link to="/" className="text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium">
               Home
-            </a>
+            </Link>
             <a href="#products" className="text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium">
               Products
             </a>
             <a href="#about" className="text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium">
               About
             </a>
-            <a href="#contact" className="text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium">
+            <Link to="/contact" className="text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium">
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* CTA Button */}
@@ -72,18 +73,18 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-light-grey/30">
             <div className="px-6 py-4 space-y-4">
-              <a href="#home" className="block text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium py-2">
+              <Link to="/" className="block text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium py-2">
                 Home
-              </a>
+              </Link>
               <a href="#products" className="block text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium py-2">
                 Products
               </a>
               <a href="#about" className="block text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium py-2">
                 About
               </a>
-              <a href="#contact" className="block text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium py-2">
+              <Link to="/contact" className="block text-dark-charcoal hover:text-accent-peach transition-colors duration-300 font-medium py-2">
                 Contact
-              </a>
+              </Link>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-accent-peach to-accent-lavender text-white font-inter font-semibold rounded-lg hover:scale-105 transition-all duration-300">
                 Shop Now
               </button>
