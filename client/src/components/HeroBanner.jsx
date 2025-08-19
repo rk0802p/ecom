@@ -1,5 +1,6 @@
 // src/components/HeroBanner.jsx
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const HeroBanner = () => {
   const heroRef = useRef(null);
@@ -69,14 +70,14 @@ const HeroBanner = () => {
 
           {/* Call to Action */}
           <div className="mb-16">
-            <button className="group px-12 py-5 bg-gradient-to-r from-accent-peach to-accent-lavender text-white font-inter font-semibold text-lg rounded-full hover-lift smooth-transition shadow-lg hover:shadow-xl">
+            <Link to="/products" className="group inline-block px-12 py-5 bg-gradient-to-r from-accent-peach to-accent-lavender text-white font-inter font-semibold text-lg rounded-full hover-lift smooth-transition shadow-lg hover:shadow-xl">
               <span className="flex items-center justify-center">
                 Shop the Collection
                 <svg className="ml-3 w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </span>
-            </button>
+            </Link>
           </div>
 
           {/* Floating Elements */}
